@@ -1,0 +1,74 @@
+/* public/assets/css/style.css - สไตล์กลางของ Takra (ต่อยอดจาก Bootstrap 5) */
+:root {
+  --tk-green: #0F4C4A;
+  --tk-green-dark: #0A3533;
+  --tk-mango: #F2A20C;
+  --tk-mango-dark: #D98E00;
+  --tk-mint: #EAF4F1;
+  --tk-ink: #12302F;
+  --bs-body-font-family: 'Prompt', 'Sarabun', 'Noto Sans Thai', system-ui, sans-serif;
+  --bs-body-color: var(--tk-ink);
+  --bs-link-color: var(--tk-green);
+  --bs-link-hover-color: var(--tk-green-dark);
+}
+body { background: #fff; }
+.tk-main { min-height: 60vh; }
+
+/* ส่วนหัว */
+.tk-header { background: var(--tk-mint); border-bottom: 1px solid #d3e6e1; z-index: 1030; }
+.tk-brand { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; font-size: 1.6rem; color: var(--tk-green); letter-spacing: -.5px; }
+.tk-brand:hover { color: var(--tk-green-dark); }
+.tk-header .nav-link { color: var(--tk-ink); font-weight: 500; }
+.tk-header .nav-link:hover { color: var(--tk-green); }
+.tk-search { display: flex; gap: .5rem; flex: 1; max-width: 520px; }
+.tk-badge { background: var(--tk-mango); color: var(--tk-ink); border-radius: 999px; font-weight: 600; }
+
+/* ปุ่ม */
+.tk-btn-primary { background: var(--tk-mango); color: var(--tk-ink); font-weight: 600; border: 0; }
+.tk-btn-primary:hover, .tk-btn-primary:focus-visible { background: var(--tk-mango-dark); color: var(--tk-ink); }
+.tk-btn-green { background: var(--tk-green); color: #fff; font-weight: 600; border: 0; }
+.tk-btn-green:hover, .tk-btn-green:focus-visible { background: var(--tk-green-dark); color: #fff; }
+
+/* การ์ดสินค้า */
+.tk-product { border: 1px solid #e3ece9; border-radius: 14px; overflow: hidden; background: #fff; height: 100%; transition: border-color .15s; }
+.tk-product:hover { border-color: var(--tk-green); }
+.tk-product img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: var(--tk-mint); }
+.tk-product .tk-price { color: var(--tk-green); font-weight: 700; }
+.tk-stars { color: var(--tk-mango); letter-spacing: 1px; }
+
+/* ส่วนท้าย */
+.tk-footer { background: var(--tk-green); color: #d7ebe7; }
+.tk-footer a { color: #fff; }
+
+:focus-visible { outline: 3px solid var(--tk-mango); outline-offset: 2px; }
+
+/* หน้าแรก */
+.tk-hero { background: var(--tk-green); color: #fff; border-radius: 24px; padding: 3rem 2rem; }
+@media (min-width: 992px) { .tk-hero { padding: 3.5rem 4rem; } }
+.tk-hero .lead { color: #cfe6e1; }
+.tk-chip { display: inline-block; padding: .5rem 1.1rem; border-radius: 999px; background: var(--tk-mint); color: var(--tk-green); font-weight: 500; text-decoration: none; border: 1px solid #cfe3de; }
+.tk-chip:hover { background: var(--tk-green); color: #fff; }
+.tk-card-title { font-weight: 500; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.7em; }
+
+/* หน้ารายละเอียดสินค้า */
+.tk-gallery-main { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 16px; background: var(--tk-mint); }
+.tk-thumb { width: 64px; height: 64px; padding: 0; border: 2px solid transparent; border-radius: 10px; overflow: hidden; background: none; }
+.tk-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tk-thumb.active, .tk-thumb:hover { border-color: var(--tk-green); }
+.tk-price-big { font-size: 2rem; font-weight: 700; color: var(--tk-green); }
+.tk-prose { max-width: 70ch; line-height: 1.8; }
+.tk-box { background: var(--tk-mint); border-radius: 14px; padding: 1.25rem; }
+.tk-bar { background: var(--tk-mango); }
+.tk-reply { background: #f3f8f6; border-left: 3px solid var(--tk-green); padding: .6rem .9rem; border-radius: 6px; }
+.tk-review-img { width: 84px; height: 84px; object-fit: cover; border-radius: 8px; margin-right: .4rem; }
+
+/* ตะกร้า */
+.tk-cart-img { width: 84px; height: 84px; object-fit: cover; border-radius: 10px; background: var(--tk-mint); }
+.tk-unavailable { opacity: .6; }
+.tk-unavailable .btn-link { opacity: 1; }
+
+/* ชำระเงิน */
+.tk-option { display: block; border: 1px solid #cfe3de; border-radius: 12px; padding: .9rem 1rem; cursor: pointer; background: #fff; }
+.tk-option:hover { border-color: var(--tk-green); }
+.tk-option:has(input:checked) { border-color: var(--tk-green); background: var(--tk-mint); }
+.tk-option-off { opacity: .55; cursor: not-allowed; }
